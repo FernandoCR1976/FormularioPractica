@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <div class="form-section">
+        <h2>Crear Nueva Tarjeta de Producto</h2>
+        <form id="productForm">
+            <div class="form-group">
+                <label for="productName">Nombre del Producto:</label>
+                <input type="text" id="productName" name="productName" placeholder="Ej: Zapatillas Deportivas">
+                <p class="error-message" id="errorProductName">El nombre del producto es requerido.</p>
+            </div>
+            <div class="form-group">
+                <label for="productDescription">Descripción:</label>
+                <textarea id="productDescription" name="productDescription"
+                    placeholder="Una breve descripción del producto..."></textarea>
+                <p class="error-message" id="errorProductDescription">La descripción es requerida.</p>
+            </div>
+            <div class="form-group">
+                <label for="productPrice">Precio:</label>
+                <input type="number" id="productPrice" name="productPrice" step="0.01" min="0" placeholder="Ej: 49.99">
+                <p class="error-message" id="errorProductPrice">El precio debe ser un número positivo.</p>
+            </div>
+            <div class="form-group">
+                <label for="productImage">URL de la Imagen:</label>
+                <input type="text" id="productImage" name="productImage"
+                    placeholder="Ej: https://example.com/imagen.jpg">
+                <p class="error-message" id="errorProductImage">La URL de la imagen es inválida o requerida.</p>
+            </div>
+            <button type="submit">Crear Tarjeta</button>
+        </form>
+    </div>
+
+    <div class="cards-section">
+        <h2>Tarjetas de Productos</h2>
+        <div id="productCardsContainer">
+            <p class="no-cards-message" id="noCardsMessage">No hay tarjetas de producto aún. ¡Crea una!</p>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+
+</body>
+
+</html>
